@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Prospects</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; text-align: center; }
+        header { background: #28a745; color: white; padding: 20px; font-size: 24px; }
+        .container { padding: 20px; max-width: 800px; margin: auto; background-color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        label { text-align: left; font-size: 16px; }
+        input, select, button { padding: 10px; font-size: 16px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <header>Formulaire d'Éligibilité pour Rénovation</header>
+    <div class="container">
+        <h2>Vérifiez votre éligibilité à la rénovation</h2>
+        <!-- Formulaire qui envoie les données à Formspree -->
+        <form id="prospectForm" action="https://formspree.io/f/xvgkobaw" method="POST">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="codePostal">Code Postal :</label>
+            <input type="text" id="codePostal" name="codePostal" required>
+
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="typeCombles">Type de combles :</label>
+            <select id="typeCombles" name="typeCombles" required>
+                <option value="perdus">Perdus</option>
+                <option value="amenageable">Aménageables</option>
+            </select>
+
+            <label for="isolationExterieur">Isolation extérieure :</label>
+            <select id="isolationExterieur" name="isolationExterieur" required>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+
+            <label for="sousSol">Sous-sol, cave, garage ou vide sanitaire :</label>
+            <select id="sousSol" name="sousSol" required>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+
+            <label for="pieceChauffe">Pièce chauffée au-dessus :</label>
+            <select id="pieceChauffe" name="pieceChauffe" required>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+
+            <label for="chauffage">Mode de chauffage :</label>
+            <select id="chauffage" name="chauffage" required>
+                <option value="electrique">Électrique</option>
+                <option value="gaz">Gaz</option>
+                <option value="fioul">Fioul</option>
+                <option value="bois">Bois</option>
+                <option value="pompeChaleur">Pompe à chaleur</option>
+            </select>
+
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+</body>
+</html>
